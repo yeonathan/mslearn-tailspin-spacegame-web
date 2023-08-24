@@ -1,9 +1,11 @@
-pool: MyAgentPool
+pool:
+  name: MyAgentPool
+
+steps:
 - task: DotNetCoreCLI@2
   inputs:
     packageType: 'sdk'
-    version: 
-  inputs:
+    version: '3.x' # You should specify the desired .NET Core SDK version here
     command: 'build'
-steps:
+
 - bash: echo hello world
